@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://expressback-kylv.onrender.com/api/footer/subscribe', {
+      const response = await fetch('https://expresservice.onrender.com/api/footer/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

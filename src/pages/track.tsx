@@ -17,7 +17,7 @@ import { pingServer } from "../components/pingServer";
 import TestimonialCarousel from '../components/Testimony';
 
 // const socket = io('http://localhost:4000');
-const socket = io('https://expressback-kylv.onrender.com', {
+const socket = io('https://expresservice.onrender.com', {
   transports: ['websocket'],
   reconnectionAttempts: 5,
   reconnectionDelay: 1000,
@@ -103,7 +103,7 @@ const TrackPage: React.FC = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('https://expressback-kylv.onrender.com/track', {
+      const res = await fetch('https://expresservice.onrender.com/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code: code.trim() }),
@@ -261,7 +261,7 @@ const TrackPage: React.FC = () => {
           {!hideStatusMessages && showLive && (
             <div className="mt-4 p-3 bg-green-100 border border-green-300 rounded-lg">
               <p className="text-green-700 font-medium">
-                 Live tracking - Package updates every 1 minute
+                Live tracking - Package updates every 1 minute
               </p>
             </div>
           )}
